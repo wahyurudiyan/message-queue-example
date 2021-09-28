@@ -20,11 +20,11 @@ func main() {
 	loop := make(chan bool)
 	go func() {
 		for m := range message {
-			data, _ := json.Marshal(m)
+			data, _ := json.Marshal(string(m.Body))
 			logrus.Printf("DATA : %s", string(data))
 		}
 	}()
 
 	fmt.Printf("[start] message started to listen, to exit pser CTRL+C\n\n")
-	<-loop
+	<-loop // this channel will block your code until code interrupt
 }
