@@ -10,7 +10,7 @@ import (
 
 func main() {
 	RESTPort := ":8080"
-	pubSvc := publisher.NewPublisher("guest", "guest", "localhost", "5672")
+	pubSvc := publisher.NewPublisher("guest", "guest", "rabbitmq", "5672")
 	handler := api.NewService("myQueue", pubSvc)
 
 	ec := echo.New()

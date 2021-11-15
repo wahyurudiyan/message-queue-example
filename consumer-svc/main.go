@@ -10,7 +10,7 @@ import (
 
 func main() {
 	queueName := "myQueue"
-	consSvc := consumer.NewConsumer("guest", "guest", "localhost", "5672")
+	consSvc := consumer.NewConsumer("guest", "guest", "rabbitmq", "5672")
 
 	message, err := consSvc.ConsumeMessage(queueName)
 	if err != nil {
