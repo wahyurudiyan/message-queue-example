@@ -47,7 +47,7 @@ docker run --network rabbitnet -p 5672:5672 notification-consumer:demo
 ### Sample Request
 You may do request using this CURL:
 ```bash
-curl --location --request POST 'http://:8080/api/v1/send/notification' \
+curl --location --request POST 'http://localhost:8080/api/v1/send/notification' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "title": "Title Push Notification Payment Product 4",
