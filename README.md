@@ -44,7 +44,7 @@ docker run --network rabbitnet -p 8080:8080 notification-api:demo
 # run the notification consumer
 docker run --network rabbitnet -p 5672:5672 notification-consumer:demo
 ```
-### Sample Reques
+### Sample Request
 You may do request using this CURL:
 ```bash
 curl --location --request POST 'http://:8080/api/v1/send/notification' \
